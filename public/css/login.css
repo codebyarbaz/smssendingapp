@@ -1,0 +1,84 @@
+#loginSignup {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 70px;
+}
+
+#loginSignup #register,
+#login {
+  display: inline-block;
+  border: 1px solid #1963da;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+#loginSignup .create,
+.login {
+  font-size: 24px;
+  margin: 0px 0px 10px 0px;
+}
+
+#loginSignup .label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#loginSignup .input {
+  padding: 7px 5px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  width: 300px;
+  margin: 0px 0px 10px 0px;
+}
+
+#loginSignup .last_input {
+  margin: 0px;
+}
+
+#loginSignup .button {
+  margin: 10px;
+  padding: 8px 115px;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: lightblue;
+  transition: 0.3s all;
+}
+
+#loginSignup .button:hover {
+  background-color: #63c1ff;
+}
+
+#loginSignup .registerNow {
+  text-decoration-line: underline;
+  color: #212121;
+}
+
+#loginSignup .loginTable {
+  text-align: center;
+}
+
+#loginSignup .newAccount {
+  margin: 5px 0px;
+}
+
+#loginSignup .link {
+  color: #212121;
+  text-decoration-line: underline;
+}
+
+#loginSignup .submitButton {
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 960px) {
+  #login {
+    padding: 10px;
+  }
+  #loginSignup {
+    top: 10px;
+  }
+}

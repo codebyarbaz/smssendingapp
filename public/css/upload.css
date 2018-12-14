@@ -1,0 +1,22 @@
+#fileUpload .btn_submit {
+  padding: 7px 15px;
+  border: none;
+}
+
+#fileUpload {
+  text-align: center;
+}
+
+#fileUpload .image {
+  padding: 7px 15px;
+  border: 1px solid silver;
+  border-radius: 3px;
+}
+
+#fileUpload .formWrapper {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #1963da;
+  border-radius: 3px;
+  margin: 10px;
+}

@@ -1,0 +1,18 @@
+#images .image {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  max-height: 200px;
+}
+
+#images .imageWrapper {
+  border: 1px solid #1963da;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn {
+  margin: 10px 5px;
+}

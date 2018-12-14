@@ -1,0 +1,46 @@
+#sendMessage {
+  text-align: center;
+}
+
+#sendMessage .fromWrapper {
+  display: inline-block;
+  border: 1px solid #1963da;
+  border-radius: 2px;
+  margin: 20px;
+  padding: 30px;
+}
+
+#sendMessage .btnShell {
+  text-align: left;
+}
+
+#sendMessage .MsgLable {
+  display: inline-block;
+}
+
+#sendMessage .To {
+  display: block;
+}
+
+.msgInfo {
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 960px) {
+  .Title {
+    font-size: 18px;
+  }
+  #sendMessage {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  #sendMessage .fromWrapper {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+  }
+  .contact_input {
+    width: 200px;
+  }
+}

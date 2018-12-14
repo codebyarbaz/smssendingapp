@@ -1,0 +1,11 @@
+#NotFound .pageNotFoundWrapper {
+  text-align: center;
+  border: 1px solid #1963da;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+#NotFound .bigTitle {
+  font-size: 80px;
+  margin: 20px 0px;
+}

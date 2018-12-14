@@ -1,0 +1,107 @@
+<header>
+  <nav>
+    <div id="mobileNav">
+      <div class="mobileNavWrapper">
+        <div class="hamMenuWrapper">
+          <span class="hamBar hamBarFirst"></span>
+          <span class="hamBar hamBarSecond"></span>
+          <span class="hamBar hamBarThird"></span>
+        </div>
+        <div class="mobileNavMenuWrapper">
+          <ul>
+            <a href="/">
+              <li
+                class="nav_li <% if(activeNav == 'home'){ %> activeNav <% } %>"
+              >
+                Home
+              </li>
+            </a>
+            <a href="/contacts">
+              <li
+                class="nav_li <% if(activeNav == 'contacts'){ %> activeNav <% } %>"
+              >
+                Contacts
+              </li>
+            </a>
+            <a href="/contacts/add-contact">
+              <li
+                class="nav_li <% if(activeNav == 'add-contact'){ %> activeNav <% } %>"
+              >
+                Add New Contact
+              </li>
+            </a>
+            <a href="/stats">
+              <li
+                class="nav_li <% if(activeNav == 'stats'){ %> activeNav <% } %>"
+              >
+                SMS Stats
+              </li>
+            </a>
+            <% if(isAuth == true){ %>
+            <li class="user <% if(activeNav == 'login'){ %> activeNav <% } %>">
+              Welcome Back! <%= userName %>
+            </li>
+            <% } else{ %>
+            <a href="/account/login">
+              <li
+                class="nav_li <% if(activeNav == 'login' || activeNav == 'register'){ %> activeNav <% } %>"
+              >
+                Login/Register
+              </li>
+            </a>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="nav">
+      <div class="leftSide_Nav">
+        <ul>
+          <a href="/">
+            <li class="nav_li <% if(activeNav == 'home'){ %> activeNav <% } %>">
+              Home
+            </li>
+          </a>
+          <a href="/contacts">
+            <li
+              class="nav_li <% if(activeNav == 'contacts'){ %> activeNav <% } %>"
+            >
+              Contacts
+            </li>
+          </a>
+          <a href="/contacts/add-contact">
+            <li
+              class="nav_li <% if(activeNav == 'add-contact'){ %> activeNav <% } %>"
+            >
+              Add New Contact
+            </li>
+          </a>
+          <a href="/stats">
+            <li
+              class="nav_li <% if(activeNav == 'stats'){ %> activeNav <% } %>"
+            >
+              SMS Stats
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="rightSide_Nav">
+        <ul>
+          <% if(isAuth == true){ %>
+          <li class="user <% if(activeNav == 'login'){ %> activeNav <% } %>">
+            Welcome Back! <%= userName %>
+          </li>
+          <% } else{ %>
+          <a href="/account/login">
+            <li
+              class="nav_li <% if(activeNav == 'login' || activeNav == 'register'){ %> activeNav <% } %>"
+            >
+              Login/Register
+            </li>
+          </a>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

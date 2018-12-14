@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title %></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/send-message.css" />
+    <script src="/bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <%- include ./partials/header %>
+    <div id="sendMessage" ng-controller="sendMessageController">
+      <div class="fromWrapper">
+        <p class="Title">Send Message</p>
+        <table>
+          <tr>
+            <td class="btnShell To"><label for="" class="lable">To:</label></td>
+            <td>
+              <input
+                type="text"
+                class="contact_input"
+                ng-init="number='<%= contact.number %>'"
+                ng-model="number"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="btnShell MsgLable">
+              <label for="" class="lable">Message:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="contact_input"
+                ng-init="message='Hi, Your OTP is ' + OTP"
+                ng-model="message"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="btnShell">
+              <span
+                class="btn"
+                ng-click="sendMessage('<%= contact.fname %>','<%= contact.lname %>',number,message)"
+                >Send</span
+              >
+              <p class="msgInfo">{{ msgInfo }}</p>
+              <p class="errInfo">{{ errInfo }}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/toggleMenu.js"></script>
+  <script src="/js/controllers/sendMessageController.js"></script>
+  <script src="/js/models/sendMessageFactory.js"></script>
+</html>

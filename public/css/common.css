@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #f0f0f0;
+  margin: 0px;
+  padding: 0px;
+}
+
+.activeNav {
+  background-color: #1963da;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 3px;
+  color: white;
+  background-color: #2874f0;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #1963da;
+}
+
+.red {
+  background-color: red;
+}
+
+.red:hover {
+  background-color: rgb(204, 5, 5);
+}
+
+.msgInfo {
+  color: green;
+  text-align: left;
+  max-width: 300px;
+  margin: 0px 5px;
+}
+
+.errInfo {
+  color: red;
+  text-align: left;
+  max-width: 300px;
+  margin: 0px 5px;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.contact_input {
+  padding: 7px 5px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  width: 300px;
+  margin: 0px 0px 10px 0px;
+}
+
+.formTitle {
+  text-align: left;
+  font-size: 18px;
+  color: #212121;
+  margin: 20px 5px;
+}
+
+.lable {
+  display: inline-block;
+}
+
+.Title {
+  margin: 10px;
+  font-size: 22px;
+  text-align: center;
+}

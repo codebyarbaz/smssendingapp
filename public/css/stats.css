@@ -1,0 +1,61 @@
+#Stats .msgWrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  border: 1px solid #1963da;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+#msgWrapperTitles {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  border: 1px solid #1963da;
+  border-radius: 2px;
+  margin: 10px;
+}
+
+#Stats .msgDetail {
+  margin: 16px 30px;
+}
+
+#Stats .name,
+.number,
+.date,
+.text {
+  min-width: 200px;
+}
+
+#Stats .date {
+  max-width: 120px;
+}
+
+#Stats .text {
+  max-width: 250px;
+}
+
+#Stats .headTitle {
+  font-size: 19px;
+}
+
+#Pagination {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+#Pagination .page {
+  margin: 0px 10px 10px 10px;
+}
+
+@media screen and (max-width: 960px) {
+  #Stats .msgWrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #msgWrapperTitles {
+    display: none;
+  }
+}

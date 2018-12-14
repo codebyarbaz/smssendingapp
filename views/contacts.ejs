@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title %></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/contacts.css" />
+    <script src="/bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <%- include ./partials/header %>
+    <div id="allContacts" ng-controller="contactsController">
+      <% if(contacts.length){ %>
+      <p class="Title">Contacts</p>
+      <% contacts.forEach(contact=>{ %>
+      <div class="contactWrapper">
+        <div class="contactName">
+          <p><%= contact.fname %> <%= contact.lname %></p>
+        </div>
+        <div class="contactNumber"><p><%= contact.number %></p></div>
+        <div class="sendMessage">
+          <a href="/contacts/send-message/<%= contact._id %>">
+            <span class="btn">Send Message</span>
+          </a>
+        </div>
+        <div class="deleteContact">
+          <span
+            class="btn red"
+            ng-click="deleteContact('<%= contact._id %>')"
+            >{{ deleteText }}</span
+          >
+        </div>
+      </div>
+      <% }); %>
+      <div id="Pagination">
+        <% if(currentPage == 1 && currentPage < totalPages){ %>
+        <div class="page next">
+          <span class="btn" ng-click="nextPage('<%= currentPage %>')"
+            >Next</span
+          >
+        </div>
+        <% } else if(currentPage > 1 && currentPage < totalPages){ %>
+        <div class="page next">
+          <span class="btn" ng-click="nextPage('<%= currentPage %>')"
+            >Next</span
+          >
+        </div>
+        <div class="page previous">
+          <span class="btn" ng-click="previousPage('<%= currentPage %>')"
+            >Previous</span
+          >
+        </div>
+        <% } else if(currentPage == 1){ %>
+        <div class="page next">
+          <span class="btn" ng-click="nextPage('<%= currentPage %>')"
+            >Next</span
+          >
+        </div>
+        <% } else{ %>
+        <div class="page previous">
+          <span class="btn" ng-click="previousPage('<%= currentPage %>')"
+            >Previous</span
+          >
+        </div>
+        <% } %>
+      </div>
+      <% } else{ %>
+      <p class="Title">No Contacts Found!</p>
+      <% } %>
+    </div>
+  </body>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/toggleMenu.js"></script>
+  <script src="/js/routes.js"></script>
+  <script src="/js/controllers/contactsController.js"></script>
+  <script src="/js/models/contactsFactory.js"></script>
+</html>

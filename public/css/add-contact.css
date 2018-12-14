@@ -1,0 +1,36 @@
+#addContact {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+#addContact .formWrapper {
+  display: inline-block;
+  border: 1px solid #1963da;
+  border-radius: 3px;
+  padding: 50px;
+  margin: 20px 0px;
+}
+
+#addContact .contact_input::-webkit-inner-spin-button,
+#addContact .contact_input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.msgInfo {
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 960px) {
+  #addContact .formWrapper {
+    margin: 0px;
+  }
+
+  #addContact .formWrapper {
+    padding: 10px;
+  }
+
+  .msgInfo {
+    font-size: 16px;
+  }
+}

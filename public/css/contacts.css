@@ -1,0 +1,54 @@
+#allContacts .contactWrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  border: 1px solid #1963da;
+  border-radius: 2px;
+  padding: 10px 100px;
+  margin: 10px;
+}
+
+#allContacts .sendMessage,
+.deleteContact {
+  margin: 10px 0px;
+}
+
+#allContacts .contactName,
+.contactNumber,
+.sendMessage,
+.deleteContact {
+  display: inline-block;
+  min-width: 150px;
+}
+
+#Pagination {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+#Pagination .page {
+  margin: 0px 10px 10px 10px;
+}
+
+@media screen and (max-width: 960px) {
+  #allContacts .contactWrapper {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #allContacts .contactWrapper {
+    padding: 10px;
+    text-align: center;
+  }
+
+  #allContacts .contactName,
+  .contactNumber,
+  .sendMessage,
+  .deleteContact {
+    display: block;
+  }
+  #sendMessage .fromWrapper {
+    width: 100%;
+  }
+}

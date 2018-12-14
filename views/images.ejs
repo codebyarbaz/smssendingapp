@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title %></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/images.css" />
+    <script src="/bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <%- include ./partials/header %>
+    <div id="images" ng-controller="imagesController">
+      <% images.forEach(image=>{ %>
+      <div class="imageWrapper">
+        <img class="image" src="/<%= image.imageUrl %>" alt="" />
+        <span
+          class="btn"
+          ng-click="deleteImage('<%= image._id %>','<%= image.imageUrl %>')"
+          >Delete</span
+        >
+        <p class="errInfo">{{ errInfo }}</p>
+        <p class="msgInfo">{{ msgInfo }}</p>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/toggleMenu.js"></script>
+  <script src="/js/controllers/imagesController.js"></script>
+  <script src="/js/models/imagesFactory.js"></script>
+</html>

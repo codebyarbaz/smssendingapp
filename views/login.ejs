@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= title %></title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <script src="/bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <%- include ./partials/header %>
+
+    <div id="loginSignup" ng-controller="userLoginController">
+      <div id="login">
+        <p class="Title">Login Account</p>
+        <table class="loginTable">
+          <p class="msgInfo">{{ msgInfo }}</p>
+          <p class="errInfo">{{ errInfo }}</p>
+          <tr>
+            <td><label class="label" for="username">Username</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="input"
+                name="username"
+                ng-model="userDetails.username"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label class="label" for="password">Password</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                class="input last_input"
+                type="password"
+                name="password"
+                ng-model="userDetails.password"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="btn submitButton" ng-click="loginAccount()"
+                >Login</span
+              >
+              <p class="newAccount">
+                Create a new account!
+                <a class="link" href="/account/register">Click here</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/toggleMenu.js"></script>
+  <script src="/js/controllers/userLoginController.js"></script>
+  <script src="/js/models/userLoginFactory.js"></script>
+</html>

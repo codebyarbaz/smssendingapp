@@ -1,0 +1,148 @@
+#nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  background-color: #2874f0;
+  width: 100%;
+  height: 55px;
+}
+
+#nav .leftSide_Nav ul .nav_li {
+  color: #f0f0f0;
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 0px -2px;
+}
+
+#nav .rightSide_Nav ul .nav_li {
+  color: #f0f0f0;
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 30px;
+}
+
+#nav .rightSide_Nav ul .user {
+  color: #f0f0f0;
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 30px;
+}
+
+#nav .rightSide_Nav ul .user:hover {
+  transition: 0.5s;
+  cursor: default;
+  background-color: #1963da;
+}
+
+#nav ul .nav_li:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #1963da;
+}
+
+#mobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  #mobileNav {
+    display: block;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #mobileNav .mobileNavWrapper {
+    display: block;
+    background-color: #2874f0;
+    height: 55px;
+    border-bottom: 1px solid #1963da;
+  }
+
+  #mobileNav .hamMenuWrapper {
+    display: inline-block;
+    margin: 15px 12px;
+    z-index: 3;
+  }
+
+  #mobileNav .hamMenuWrapper:hover {
+    cursor: pointer;
+  }
+
+  #mobileNav .hamBar {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+    background-color: white;
+    width: 35px;
+    height: 4px;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+
+  #mobileNav .hamBar1 {
+    transform-origin: left center;
+    top: -3px;
+    left: 8px;
+    transform: rotate(45deg);
+  }
+
+  #mobileNav .hamBar2 {
+    display: none;
+  }
+
+  #mobileNav .hamBar3 {
+    transform-origin: left center;
+    top: 13px;
+    left: 8px;
+    transform: rotate(-45deg);
+  }
+
+  #mobileNav .mobileNavMenuWrapper {
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 3px;
+    left: 0px;
+    width: 30%;
+    background-color: #2874f0;
+    transition: 0.5s;
+    transform-origin: 0% 0%;
+    transform: translate(-150%, 0);
+  }
+
+  #mobileNav .HidemobileNavMenuWrapper {
+    width: 100%;
+    top: 3px;
+    transform: translate(0%, 0);
+  }
+
+  #mobileNav .nav_li {
+    color: #f0f0f0;
+    font-size: 18px;
+    display: block;
+    padding: 15px 30px;
+    transition: 0.3s;
+  }
+
+  #mobileNav .nav_li:hover {
+    background-color: #1963da;
+  }
+
+  #mobileNav ul .user {
+    color: #f0f0f0;
+    font-size: 18px;
+    display: inline-block;
+    padding: 15px 30px;
+  }
+
+  #mobileNav ul .user:hover {
+    background-color: #1963da;
+  }
+
+  .Title {
+    text-align: left;
+  }
+}
